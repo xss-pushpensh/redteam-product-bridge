@@ -1,0 +1,15 @@
+services:
+  bridge:
+    build: .
+    volumes: ["./data:/app/data", "./config:/app/config"]
+    environment: [DB_PATH=/app/data/bridge.db]
+    depends_on: [juice-shop]
+  dashboard:
+    build: .
+    command: streamlit run src/dashboard/app.py --server.port=8501 --server.address=0.0.0.0
+    ports: ["8501:8501"]
+    volumes: ["./data:/app/data"]
+    environment: [DB_PATH=/app/data/bridge.db]
+  juice-shop:
+    image: bkimminich/juice-shop
+    ports: ["3000:3000"]

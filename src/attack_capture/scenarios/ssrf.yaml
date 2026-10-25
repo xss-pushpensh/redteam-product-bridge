@@ -1,0 +1,8 @@
+name: SSRF Attack Simulation
+target: http://localhost:8080
+affected_component: /api/fetch
+finding:
+  title: "SSRF to Cloud Metadata"
+  severity: critical
+  cvss: 9.1
+  mitre: T1190

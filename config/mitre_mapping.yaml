@@ -1,0 +1,16 @@
+ssrf:
+  technique: T1190
+  tactic: Initial Access
+  description: Exploit Public-Facing Application
+idor:
+  technique: T1078
+  tactic: Defense Evasion
+  description: Valid Accounts
+sqli:
+  technique: T1190
+  tactic: Initial Access
+  description: SQL Injection
+privilege_escalation:
+  technique: T1068
+  tactic: Privilege Escalation
+  description: Exploitation for Privilege Escalation

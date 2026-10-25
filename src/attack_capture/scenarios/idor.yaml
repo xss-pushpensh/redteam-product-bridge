@@ -1,0 +1,8 @@
+name: IDOR Attack Simulation
+target: http://localhost:8080
+affected_component: /api/user/{id}
+finding:
+  title: "IDOR - Unauthorized User Data Access"
+  severity: high
+  cvss: 7.5
+  mitre: T1078
